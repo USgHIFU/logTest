@@ -10,11 +10,11 @@ Test of log module
 QString fileName = "D:\\log.log";
 
 2、修改main.cpp，加入下面代码
-#include "logging_define.cpp"
+  ##include "logging_define.cpp"
 qInstallMessageHandler(logMessageOutput);
 
 3、在各自模块的头文件加入下面代码
-include <QLoggingCategory>
+  ##include <QLoggingCategory>
 Q_DECLARE_LOGGING_CATEGORY(Module_Name)
 
 4、在各自模块的源文件加入下面代码
