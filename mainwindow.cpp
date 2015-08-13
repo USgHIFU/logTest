@@ -7,11 +7,14 @@ Q_LOGGING_CATEGORY(Button_Stop,"Module Stop")
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    setStyleSheet("QPushButton {background-color: yellow}");
+
     m_btnStart = new QPushButton(this);
     m_btnStart->setText("START");
+//    m_btnStart->setStyleSheet("background-color: yellow");
     m_btnStop = new QPushButton(this);
     m_btnStop->setText("STOP");
-    QHBoxLayout* layout = new QHBoxLayout(this);
+    QHBoxLayout* layout = new QHBoxLayout;
     layout->addWidget(m_btnStart);
     layout->addWidget(m_btnStop);
 
@@ -35,5 +38,5 @@ void MainWindow::btnStartClick()
 
 void MainWindow::btnStopClick()
 {
-    qCDebug(Button_Stop()) << Button_Stop().categoryName() << ": " << "Module Start works";
+    qCDebug(Button_Stop()) << Button_Stop().categoryName() << ": " << "Module Stop works";
 }

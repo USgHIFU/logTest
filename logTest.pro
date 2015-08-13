@@ -13,7 +13,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    logging_define.cpp
+        mainwindow.cpp
 
 HEADERS  += mainwindow.h
